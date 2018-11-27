@@ -39,6 +39,10 @@ ul{
       left:0;
       top:0;
       background-color: #222D32;
+      transition:1s;
+  }
+  .lt_aside.hidemenu{
+      left:-180px;
   }
   .lt_aside .brand{
     width: 100%;
@@ -120,4 +124,8 @@ ul{
     background-color: pink;
     padding-left: 180px;
     padding-top:50px;
+    transition:1s;
+}
+.lt_main.hidemenu{
+    padding-left: 0px;
 }
