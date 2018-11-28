@@ -121,11 +121,16 @@ ul{
 }
 .lt_main{
     height: 2000px;
-    background-color: pink;
+    /* background-color: pink; */
     padding-left: 180px;
     padding-top:50px;
     transition:1s;
 }
 .lt_main.hidemenu{
     padding-left: 0px;
+}
+.echarts_left,
+.echarts_right{
+    width: 48%;
+    height: 400px;
 }
