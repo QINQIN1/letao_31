@@ -33,7 +33,7 @@ $(function(){
           totalPages: Math.ceil( info.total / info.size ), // 总页数
           // 给页码添加点击事件
           onPageClicked: function( a, b, c, page ) {
-            // console.log( page );
+            console.log( page );
             // 更新当前页
             currentPage = page;
             // 重新渲染
