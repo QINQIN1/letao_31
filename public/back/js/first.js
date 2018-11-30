@@ -39,7 +39,54 @@ $(function(){
         });
     }
 
-    //点击按钮显示
+    //点击按钮显示添加模态框
+    $('#addBtn').click(function(){
+        $('#addModal').modal("show");
+    })
+    //进行表单校验
+    $('#form').bootstrapValidator({
+        //校验图标
+        feedbackIcons:{
+            valid:'glyphicon glyphicon-ok', 
+            invalid:'glyphicon glyphicon-remove', 
+            validating:'glyphicon glyphicon-refresh', 
+        },
+        fields: {    // input框中需要配置 name
+            categoryName: {
+              validators: {
+                notEmpty: {
+                  message: "请输入一级分类名称"
+                }
+              }
+            }
+          }
+        });
+    //注册表单校验事件，阻止表单默认提交，表单校验成功，通过ajax发送请求提交
+    $('#form').on('success.form.bv',function(e){
+        e.preventDefault();
+   
+        $.ajax({
+            type: "post",
+            url: "/category/addTopCategory",
+            data: $('#form').serialize(),
+            dataType: "json",
+            success: function( info ) {
+              console.log( info );
+              if ( info.success ) {
+                // 关闭模态框
+                $('#addModal').modal("hide");
+                // 重新渲染页面, 渲染第一页
+                currentPage = 1;
+                render();
+      
+                // 重置表单的内容 和 状态
+                // resetForm( true ); 表示内容和状态都重置
+                // resetForm();   表示只重置状态
+                $('#form').data("bootstrapValidator").resetForm(true)
+              }
+            }
+          })
+    })
 
 
 })
