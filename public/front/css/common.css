@@ -79,7 +79,15 @@ ul{
     color:#fff;
     text-align: center;
     padding-top: 7px;
+
 }
+.lt_footer ul li a.current{
+  color: orange;
+}
+.lt_footer ul li a.current p{
+    color:orange;
+}
+
 .lt_footer ul li a p{
     color:#fff;
     margin:0;
