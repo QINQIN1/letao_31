@@ -2,6 +2,10 @@ html,body{
     width: 100%;
     height: 100%;
 }
+img{
+    display: block;
+    width: 100%;
+}
 ul{
     margin: 0;
     padding: 0;
@@ -10,7 +14,7 @@ ul{
 .lt_container{
     width: 100%;
     height: 100%;
-    background-color:pink;
+    /* background-color:pink; */
     min-width:320px;
     max-width:640px;
     overflow: hidden;
@@ -84,6 +88,6 @@ ul{
 .lt_main{
     width: 100%;
     height: 100%;
-    background-color:skyblue;
+    background-color:#fff;
     position: relative;
 }
