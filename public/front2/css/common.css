@@ -65,11 +65,11 @@ ul {
   height: 55px;
   background-color: #006699;
 }
-.lt_footer li {
+.lt_footer ul li {
   float: left;
   width: 25%;
 }
-.lt_footer li a {
+.lt_footer ul li a {
   padding-top: 8px;
   display: block;
   text-align: center;
